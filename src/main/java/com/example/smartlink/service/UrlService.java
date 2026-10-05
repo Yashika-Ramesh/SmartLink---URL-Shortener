@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -20,6 +21,16 @@ public class UrlService {
     // CREATE SHORT URL
     public Url createShortUrl(Url url) {
 
+        // Check whether original URL already exists
+        Optional<Url> existingUrl =
+                urlRepository.findByOriginalUrl(url.getOriginalUrl());
+
+        // If it exists, return the existing record
+        if (existingUrl.isPresent()) {
+            return existingUrl.get();
+        }
+
+        // Generate new short code
         String shortCode = generateUniqueShortCode();
 
         url.setShortCode(shortCode);
