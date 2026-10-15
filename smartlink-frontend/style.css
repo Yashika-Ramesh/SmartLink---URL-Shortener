@@ -1,0 +1,169 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background and layout */
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url("images/smartlink-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main card */
+.container {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #334155;
+}
+
+/* URL input */
+input {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+/* Button */
+button {
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Result area */
+#result {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+    color: #334155;
+}
+
+
+/* Copy Link Button */
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+    margin-left: 10px;
+
+    background: #eef2ff;
+    color: #2563eb;
+
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.copy-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Click Effect */
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+/* Copied Successfully */
+.copy-btn.copied {
+    background: #dcfce7;
+    color: #15803d;
+    border-color: #bbf7d0;
+    box-shadow: none;
+}
+
+/* Success Message */
+.success-message {
+    color: #15803d;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Short URL Layout */
+.short-url-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Short URL Link */
+.short-url {
+    color: #2563eb;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.short-url:hover {
+    text-decoration: underline;
+}
